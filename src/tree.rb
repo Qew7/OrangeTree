@@ -23,7 +23,7 @@ class Tree
     raise TreeIsDeadError if dead?
     self.age += 1
     return die if age >= 35
-    bear_fruits if age >= 5
+    bear_fruits && grow_in_size if age >= 5
   end
 
   def fruits?
@@ -43,4 +43,9 @@ class Tree
   def bear_fruits
     rand(0..10).times { fruits << Fruit.new }
   end
+
+  def grow_in_size
+    rand(0..1).times { self.height += 1 }
+  end
 end
+
