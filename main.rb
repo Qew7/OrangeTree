@@ -14,14 +14,14 @@ p "        xXXXXXXXx       "
 p "       xXXXXXXXXXx      "
 p "     xXXXxxXXXУУXXx     "
 p "   xXXXXXXXXxxxXXXXXx   "
-(tree.age/7).times do
+(tree.height/2).times do
   p "  xXXxxXoXX9XXxXXX0XXx  "
   p "  xXXOXXXXxxxOXXXXXXXx  "
   p "  xXxXX8XXOXXXxXX0XXXx  "
 end
 p "   xXXXXXXXXXXXXXXXXx   "
 p "    xXXXXXXXXXXXXXXx    "
-(tree.age/6).times do
+(tree.height/2).times do
   p "          |||           "
 end
 p "         J|||L          "
@@ -29,6 +29,7 @@ p "________________________"
 p "========================"
 p "^^^^^^^^^^^^^^^^^^^^^^^^"
 p "Your tree is #{tree.age} years old"
+p "Your tree height is #{tree.height + 3} units"
 p "There is #{tree.fruits.count} fruits on your tree"
 
 rand(5..50).times do
