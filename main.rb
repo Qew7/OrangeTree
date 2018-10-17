@@ -7,37 +7,37 @@ rand(2..40).times do
   tree.grow
 end
 
-p "                        "
-p "                        "
-p "          xxxxx         "
-p "        xXXXXXXXx       "
-p "       xXXXXXXXXXx      "
-p "     xXXXxxXXXУУXXx     "
-p "   xXXXXXXXXxxxXXXXXx   "
+puts "                        "
+puts "                        "
+puts "          xxxxx         "
+puts "        xXXXXXXXx       "
+puts "       xXXXXXXXXXx      "
+puts "     xXXXxxXXXУУXXx     "
+puts "   xXXXXXXXXxxxXXXXXx   "
 (tree.height/2).times do
-  p "  xXXxxXoXX9XXxXXX0XXx  "
-  p "  xXXOXXXXxxxOXXXXXXXx  "
-  p "  xXxXX8XXOXXXxXX0XXXx  "
+  puts "  xXXxxXoXX9XXxXXX0XXx  "
+  puts "  xXXOXXXXxxxOXXXXXXXx  "
+  puts "  xXxXX8XXOXXXxXX0XXXx  "
 end
-p "   xXXXXXXXXXXXXXXXXx   "
-p "    xXXXXXXXXXXXXXXx    "
+puts "   xXXXXXXXXXXXXXXXXx   "
+puts "    xXXXXXXXXXXXXXXx    "
 (tree.height/2).times do
-  p "          |||           "
+  puts "          |||           "
 end
-p "         J|||L          "
-p "________________________"
-p "========================"
-p "^^^^^^^^^^^^^^^^^^^^^^^^"
-p "Your tree is #{tree.age} years old"
-p "Your tree height is #{tree.height + 3} units"
-p "There is #{tree.fruits.count} fruits on your tree"
+puts "         J|||L          "
+puts "________________________"
+puts "========================"
+puts "^^^^^^^^^^^^^^^^^^^^^^^^"
+puts "Your tree is #{tree.age} years old"
+puts "Your tree height is #{tree.height + 3} units"
+puts "There is #{tree.fruits.count} fruits on your tree"
 
 rand(5..50).times do
   basket.add(tree.pick_fruit) if tree.fruits?
 end
 
-p "There is #{basket.contains.count} picked fruits in basket"
+puts "There is #{basket.contains.count} picked fruits in basket"
 
 fruit = basket.contains.sample
 
-p "Randomly chosen fruit is #{fruit.color} and #{fruit.taste}"
+puts "Randomly chosen fruit is #{fruit.color} and #{fruit.taste}"
