@@ -36,8 +36,13 @@ rand(5..50).times do
   basket.add(tree.pick_fruit) if tree.fruits?
 end
 
-puts "There is #{basket.contains.count} picked fruits in basket"
+fruits_in_basket_count = basket.contains.count
 
-fruit = basket.contains.sample
+puts "There is #{fruits_in_basket_count} picked fruits in basket"
 
-puts "Randomly chosen fruit is #{fruit.color} and #{fruit.taste}"
+if fruits_in_basket_count.positive?
+  fruit = basket.contains.sample
+  puts "Randomly chosen fruit is #{fruit.color} and #{fruit.taste}"
+else
+  puts 'There is no fruit on this tree'
+end
