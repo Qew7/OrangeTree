@@ -2,7 +2,7 @@ require_relative 'fruit'
 
 class Tree
   class TreeIsDeadError < ::StandardError; end
-  class NoFruitsOnATree < ::StandardError; end
+  class NoFruitsOnATreeError < ::StandardError; end
 
   attr_accessor :age, :height, :fruits, :alive
 
@@ -15,7 +15,7 @@ class Tree
 
   def pick_fruit
     raise TreeIsDeadError if dead?
-    raise NoFruitsOnATree unless fruits?
+    raise NoFruitsOnATreeError unless fruits?
     fruits.pop
   end
 
